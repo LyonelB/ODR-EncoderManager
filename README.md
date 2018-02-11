@@ -1,9 +1,66 @@
 # ODR-EncoderManager
 OpenDigitalRadio Encoder Manager is a tools to run and configure ODR Encoder easly with a WebGUI.
 
-ODR-EncoderManager is currently in complet re-developpement in this branch and is not yet ready to use in production.
+![Screenshot](https://raw.github.com/YoannQueret/ODR-EncoderManager/master/ODR-Encoder_Manager.png)
 
-![Screenshot] (https://raw.github.com/YoannQueret/ODR-EncoderManager/master/ODR-Encoder_Manager.png)
+# Installation sur Raspberry Pi 3
+
+## Installation d'ODR-mmbtools
+
+Avec Raspbian Jessie : http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-07-05/
+
+    $ sudo adduser odr
+    $ sudo visudo -f /etc/sudoers
+
+Ajoutez la ligne suivante après “root All=(ALL:ALL) ALL”
+
+    odr ALL=(ALL:ALL) ALL
+  
+Puis rebootez :
+
+    $ sudo reboot
+
+Importez le script d'installation 
+
+    $ su odr
+    $ cd
+    $ sudo nano /etc/apt/sources.list
+
+Supprimez le “#” au début de la ligne commençant par “deb-src”
+
+    $ sudo apt-get update
+    $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/raspdab.sh
+    $ chmod +x raspdab.sh
+    $ ./raspdab.sh 
+    $ cd
+
+## Installation de ODR-EncoderManager
+
+    $ sudo apt-get install python-cherrypy3 python-jinja2 python-serial supervisor
+    $ sudo usermod -a -G dialout odr
+    $ sudo usermod -a -G audio odr
+    $ cd /home/odr/
+    $ git clone https://github.com/YoannQueret/ODR-EncoderManager.git
+    $ mv /home/odr/ODR-EncoderManager/config.json.sample /home/odr/ODR-EncoderManager/config.json
+    $ sudo ln -s /home/odr/ODR-EncoderManager/supervisor-encoder.conf /etc/supervisor/conf.d/odr-encoder.conf
+    $ sudo ln -s /home/odr/ODR-EncoderManager/supervisor-gui.conf /etc/supervisor/conf.d/odr-gui.conf
+    $ sudo nano /etc/supervisor/supervisord.conf
+    
+Et ajoutez les lignes suivantes :
+
+    [inet_http_server]
+    port = 9100
+    username = user ; Auth username
+    password = pass ; Auth password
+    
+    $ sudo /etc/init.d/supervisor restart
+    $ sudo supervisorctl reread
+    $ sudo supervisorctl update ODR-encoderManager
+    
+Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:8080 
+
+Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier 
+
 
 # INSTALLATION
 
