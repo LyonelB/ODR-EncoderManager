@@ -20,9 +20,6 @@ Ajoutez la ligne suivante après “root All=(ALL:ALL) ALL”
 Puis rebootez :
 
     $ sudo reboot
-
-Importez le script d'installation 
-
     $ su odr
     $ cd
     $ sudo nano /etc/apt/sources.list
@@ -30,6 +27,9 @@ Importez le script d'installation
 Supprimez le “#” au début de la ligne commençant par “deb-src”
 
     $ sudo apt-get update
+    
+Importez le script d'installation 
+
     $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/raspdab.sh
     $ chmod +x raspdab.sh
     $ ./raspdab.sh 
