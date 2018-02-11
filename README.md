@@ -50,7 +50,7 @@ Importez le script d'installation
 Et ajoutez les lignes suivantes :
 
     [inet_http_server]
-    port = 9100
+    port = 9001
     username = user ; Auth username
     password = pass ; Auth password
     
@@ -66,7 +66,7 @@ Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier /home/odr/
 
 ## Supervisor
 
-Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:9100 pour accéder à l'interface de Supervisor
+Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:9001 pour accéder à l'interface de Supervisor
 Et connectez-vous avec les identifiants/mdp : 
 
     user
