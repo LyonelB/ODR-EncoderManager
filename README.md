@@ -1,5 +1,6 @@
 # ODR-EncoderManager
-OpenDigitalRadio Encoder Manager is a tools to run and configure ODR Encoder easly with a WebGUI.
+
+OpenDigitalRadio Encoder Manager est un outil qui permet de lancer et configurer facilement ODR Encoder gràace à son interface WebGUI.
 
 ![Screenshot](https://raw.github.com/YoannQueret/ODR-EncoderManager/master/ODR-Encoder_Manager.png)
 
@@ -53,14 +54,23 @@ Et ajoutez les lignes suivantes :
     username = user ; Auth username
     password = pass ; Auth password
     
+Reprenez l'installation :
+
     $ sudo /etc/init.d/supervisor restart
     $ sudo supervisorctl reread
     $ sudo supervisorctl update ODR-encoderManager
     
-Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:8080 
+Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:8080 pour accéder à l'interface d'ODR encoder 
 
-Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier 
+Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier /home/odr/ODR-EncoderManager/config.json
 
+## Supervisor
+
+Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:9100 pour accéder à l'interface de Supervisor
+Et connectez-vous avec les identifiants/mdp : 
+
+    user
+    pass
 
 # INSTALLATION
 
