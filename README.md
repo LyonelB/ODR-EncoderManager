@@ -50,7 +50,7 @@ Importez le script d'installation
 Et ajoutez les lignes suivantes :
 
     [inet_http_server]
-    port = 9001
+    port = 9200
     username = user ; Auth username
     password = pass ; Auth password
     
