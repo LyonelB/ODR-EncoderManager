@@ -71,6 +71,15 @@ Et connectez-vous avec les identifiants/mdp :
 
     user
     pass
+    
+## Parametrage
+
+    $ cd /tmp
+    $ mkdir slide && cd slide
+    $ wget http://url.de.votre.image.jpeg
+    $ cd /tmp
+    $ touch metadata.dls
+
 
 # INSTALLATION
 
