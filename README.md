@@ -9,6 +9,8 @@ OpenDigitalRadio Encoder Manager est un outil qui permet de lancer et configurer
 ## Installation d'ODR-mmbtools
 
 Avec Raspbian Jessie : http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-07-05/
+Fonctionne également avec Raspbian Jessie Lite
+(A tester : avec Raspbian Stretch Lite)
 
     $ sudo adduser odr
     $ sudo visudo -f /etc/sudoers
@@ -31,6 +33,13 @@ Supprimez le “#” au début de la ligne commençant par “deb-src”
 Importez le script d'installation 
 
     $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/raspdab.sh
+    $ chmod +x raspdab.sh
+    $ ./raspdab.sh 
+    $ cd
+    
+A tester : Pour Raspbian Stretch Lite
+
+    $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/EncManInstall.sh
     $ chmod +x raspdab.sh
     $ ./raspdab.sh 
     $ cd
