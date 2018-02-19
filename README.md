@@ -106,9 +106,8 @@ password = pass ; Auth password
   * (root) Start WEB server : supervisorctl reread; supervisorctl update ODR-encoderManager
   * Go to : http://<ip_address>:8080
   
-
-
 # CONFIGURATION
+
   * You can edit global configuration, in particular path in this files :
     * config.json
     * supervisor-gui.conf
@@ -116,6 +115,7 @@ password = pass ; Auth password
     
 
 # ADVANCED
+
   * To use the reboot api (/api/reboot), you need to allow odr user to run shutdown command by adding the line bellow at the end of /etc/sudoers file :
 ```
 odr     ALL=(ALL) NOPASSWD: /sbin/shutdown
