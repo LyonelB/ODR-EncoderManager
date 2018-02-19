@@ -1,6 +1,6 @@
 # ODR-EncoderManager
 
-OpenDigitalRadio Encoder Manager est un outil qui permet de lancer et configurer facilement ODR Encoder gràace à son interface WebGUI.
+OpenDigitalRadio Encoder Manager est un outil qui permet de lancer et configurer facilement ODR Encoder grâce à son interface WebGUI.
 
 ![Screenshot](https://raw.github.com/YoannQueret/ODR-EncoderManager/master/ODR-Encoder_Manager.png)
 
@@ -9,8 +9,7 @@ OpenDigitalRadio Encoder Manager est un outil qui permet de lancer et configurer
 ## Installation d'ODR-mmbtools
 
 Avec Raspbian Jessie : http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-07-05/
-Fonctionne également avec Raspbian Jessie Lite
-(A tester : avec Raspbian Stretch Lite)
+Fonctionne également avec Raspbian Jessie Lite et Raspbian Stretch Lite
 
     $ sudo adduser odr
     $ sudo visudo -f /etc/sudoers
@@ -32,13 +31,6 @@ Supprimez le “#” au début de la ligne commençant par “deb-src”
     
 Importez le script d'installation 
 
-    $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/raspdab.sh
-    $ chmod +x raspdab.sh
-    $ ./raspdab.sh 
-    $ cd
-    
-A tester : Pour Raspbian Stretch Lite
-
     $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/EncManInstall.sh
     $ chmod +x raspdab.sh
     $ ./raspdab.sh 
@@ -49,8 +41,8 @@ A tester : Pour Raspbian Stretch Lite
     $ sudo apt-get install python-cherrypy3 python-jinja2 python-serial supervisor
     $ sudo usermod -a -G dialout odr
     $ sudo usermod -a -G audio odr
-    $ cd /home/odr/
-    $ git clone https://github.com/YoannQueret/ODR-EncoderManager.git
+    $ cd /home/odr
+    $ git clone https://github.com/LyonelB/ODR-EncoderManager.git
     $ mv /home/odr/ODR-EncoderManager/config.json.sample /home/odr/ODR-EncoderManager/config.json
     $ sudo ln -s /home/odr/ODR-EncoderManager/supervisor-encoder.conf /etc/supervisor/conf.d/odr-encoder.conf
     $ sudo ln -s /home/odr/ODR-EncoderManager/supervisor-gui.conf /etc/supervisor/conf.d/odr-gui.conf
@@ -68,10 +60,14 @@ Reprenez l'installation :
     $ sudo /etc/init.d/supervisor restart
     $ sudo supervisorctl reread
     $ sudo supervisorctl update ODR-encoderManager
+    $ sudo reboot
     
 Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:8080 pour accéder à l'interface d'ODR encoder 
 
 Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier /home/odr/ODR-EncoderManager/config.json
+
+    joe
+    secret
 
 ## Supervisor
 
@@ -88,7 +84,6 @@ Et connectez-vous avec les identifiants/mdp :
     $ wget http://url.de.votre.image.jpeg
     $ cd /tmp
     $ touch metadata.dls
-
 
 # INSTALLATION
 
