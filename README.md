@@ -95,6 +95,7 @@ Ajoutez les lignes suivantes
     command=python /usr/local/bin/supermail.py -a -m mail@domain.com -o "[ODR]"
     events=PROCESS_STATE
     
+    $ sudo apt-get install sendmail
     $ cd /usr/local/bin
     $ sudo wget https://raw.githubusercontent.com/YoannQueret/ODR-tools/master/supervisor/supermail.py
     $ sudo /etc/init.d/supervisor restart
