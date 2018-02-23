@@ -85,6 +85,22 @@ Et connectez-vous avec les identifiants/mdp :
     $ cd /tmp
     $ touch metadata.dls
 
+## Monitoring
+
+    $ sudo nano /etc/supervisor/supervisord.conf
+    
+Ajoutez les lignes suivantes 
+
+    [eventlistener:supermail]
+    command=python /usr/local/bin/supermail.py -a -m mail@domain.com -o "[ODR]"
+    events=PROCESS_STATE
+    
+    $ cd /usr/local/bin
+    $ sudo wget https://raw.githubusercontent.com/YoannQueret/ODR-tools/master/supervisor/supermail.py
+    $ sudo /etc/init.d/supervisor restart
+    $ sudo supervisorctl reread
+    $ sudo supervisorctl update
+
 # INSTALLATION
 
   * (root) Install requirement : apt install python-cherrypy3 python-jinja2 python-serial supervisor
