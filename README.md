@@ -121,3 +121,6 @@ password = pass ; Auth password
 odr     ALL=(ALL) NOPASSWD: /sbin/shutdown
 ```
 
+### Notes et liens
+
+https://www.rack-matrix.com/fr/galerie#20
