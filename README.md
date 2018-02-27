@@ -71,7 +71,7 @@ Et connectez-vous, avec les identifiants/mdp indiqué dans le fichier /home/odr/
 
 ## Supervisor
 
-Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:9001 pour accéder à l'interface de Supervisor
+Rendez-vous à l'adresse ip de votre Raspberry Pi : http://<ip_address>:9200 pour accéder à l'interface de Supervisor
 Et connectez-vous avec les identifiants/mdp : 
 
     user
