@@ -128,6 +128,14 @@ Solutions choisies par Digris :
 
 https://service.digris.ch/doc/service/encoder/onsite.html#hardware
 
+Titres en cours
+
+https://github.com/mpbraendli/mmbtools-aux/blob/master/icy-info.py
+
+Pochette 
+
+https://github.com/mpbraendli/mmbtools-aux/blob/master/fipcover.py
+
 
 # INSTALLATION
 
