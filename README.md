@@ -31,7 +31,7 @@ Supprimez le “#” au début de la ligne commençant par “deb-src”
     
 Importez le script d'installation 
 
-    $ wget https://raw.githubusercontent.com/LyonelB/RaspDAB/master/EncManInstall.sh
+    $ wget https://raw.githubusercontent.com/LyonelB/ODR-EncoderManager/master/EncManInstall.sh
     $ chmod +x raspdab.sh
     $ ./raspdab.sh 
     $ cd
@@ -79,11 +79,21 @@ Et connectez-vous avec les identifiants/mdp :
     
 ## Parametrage
 
-    $ cd /tmp
-    $ mkdir slide && cd slide
+    $ mkdir /pad/
+    $ chmod 777 /pad/
+    $ mkdir /pad/slide/
+    $ chmod 777 /pad/slide/
+
+Dans la partie "PAD Encoder" d'ODR-EncoderManager :
+
+PAD fifo file: /pad/metadata.pad
+DLS fifo file: /pad/metadata.dls
+Slide directory : /pad/slide/
+
+Pour ajouter votre image :
+
+    $ cd /pad/slide
     $ wget http://url.de.votre.image.jpeg
-    $ cd /tmp
-    $ touch metadata.dls
 
 ## Monitoring
 
