@@ -128,6 +128,17 @@ Solutions choisies par Digris :
 
 https://service.digris.ch/doc/service/encoder/onsite.html#hardware
 
+
+PC en rack avec carte APU2x ou APU3x
+
+Rack Matrix : https://www.rack-matrix.com/fr/
+
+Varia-store : http://varia-store.com/Hardware/19-DualRack-Box/complete-system/APU3B2-19-Rack-Bundle-power-supply-board-case::29591.html
+
+Carte son Mini PCI Express
+
+http://www.dpie.com/mini-pcie/audio/
+
 Titres en cours
 
 https://github.com/mpbraendli/mmbtools-aux/blob/master/icy-info.py
