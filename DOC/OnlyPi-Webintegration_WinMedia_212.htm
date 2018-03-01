@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Title_WinMedia_2014</title>
+</head>
+<!--
+Ne pas installer ce script sans le support WinMedia.
+-->
+
+<br><FONT face="Tahoma" color="#000000" size=1>WEB INTEGRATION - Display currently and recently played tracks on your website</FONT><br>
+
+
+<!--CURRENTSONG :-->
+
+
+~_top 1 convert(nvarchar,history.hour,103),convert(nvarchar,history.hour,108),case when category.comment like '%MUSIC%' then performer else 'NAME OF YOUR RADIO' end, case when category.comment like '%MUSIC%' then title else 'Graffiti Urban Radio' end,history.duration/1000,convert(nvarchar,convert(datetime,history.duration/86400000.),8),media.image,case when category.comment like '%MUSIC%' then 'song' else 'other' end,name,ihistory,imedia from history,media,category where station=STATIONINDEX and media!=1 and media=imedia and history.category=icategory order by ihistory desc~
+
+
+
+<br><FONT face="Tahoma" color="#000000" size=1>TITRE EN  COURS:<br> ~?a~ ~?b~ - ~?c~ - ~?d~</FONT><br>
+<br>
+<FONT face="Tahoma" color="#000000" size=1>FORMAT MINUTAGE:<br> ~?e~s - ~?f~</FONT>
+<br>
+
+
+<!--FORMULAIRE D'ENVOI :-->
+<!--FORM SEND :-->
+<body onload='document.formulaire1.submit();'>
+<iframe name="uptitre" src="javascript:void(0)" width="350" height="100"></iframe>
+<form name='formulaire1' method='post'  action='http://192.168.1.109/WinMedia.php' target='uptitre'>
+
+
+<!--METADATAS CURRENTSONG :-->
+<textarea name="radio" cols=1 rows=1 style="visibility:hidden">Radio</textarea>
+<textarea name="eventtype" cols=1 rows=1 style="visibility:hidden">~?h~</textarea>
+<textarea name="starttime" cols=1 rows=1 style="visibility:hidden">~?a~ ~?b~</textarea>
+<textarea name="artist" cols=1 rows=1 style="visibility:hidden">~?c~</textarea>
+<textarea name="title" cols=1 rows=1 style="visibility:hidden">~?d~</textarea>
+<textarea name="runtimeMST" cols=1 rows=1 style="visibility:hidden">~?f~</textarea>
+<textarea name="runtimeSM" cols=1 rows=1 style="visibility:hidden">~?f~</textarea>
+<textarea name="runtime" cols=1 rows=1 style="visibility:hidden">~?e~</textarea>
+<textarea name="image" cols=1 rows=1 style="visibility:hidden">~?g~</textarea>
+<textarea name="album" cols=1 rows=1 style="visibility:hidden">~?c~</textarea>
+<textarea name="categorie" cols=1 rows=1 style="visibility:hidden">~?i~</textarea>
+
+<!--LASTSONG :-->
+~_top 1 convert(nvarchar,history.hour,8),upper(performer),upper(title),convert(nvarchar,convert(datetime,history.duration/86400000.),8),media.image,name from history,media,category where ihistory!=?j and station=STATIONINDEX and media!=1 and media=imedia and history.category=icategory and category.comment like '%MUSIC%' order by ihistory desc~ 
+    
+
+<br><FONT face="Tahoma" color="#000000" size=1>LAST SONG:<br> ~?a~ - ~?b~ - ~?c~</FONT><br>
+<!--METADATAS LASTSONG :-->
+<textarea name="starttimebefore" cols=1 rows=1 style="visibility:hidden">~?a~</textarea>
+<textarea name="artistbefore" cols=1 rows=1 style="visibility:hidden">~?b~</textarea>
+<textarea name="titlebefore" cols=1 rows=1 style="visibility:hidden">~?c~</textarea>
+<textarea name="runtimebefore" cols=1 rows=1 style="visibility:hidden">~?d~</textarea>
+<textarea name="imagebefore" cols=1 rows=1 style="visibility:hidden">~?e~</textarea>
+<textarea name="categoriebefore" cols=1 rows=1 style="visibility:hidden">~?f~</textarea>
+~_~
+
+
+<!--NEXTSONG :-->
+~_top 1 upper(performer),upper(title),convert(nvarchar,convert(datetime,content.duration/86400000.),8),media.image,name from playlist,content,media,category where station=STATIONINDEX and hour='20790101 00:00:00' and iplaylist=playlist and media!=1 and media!=?k and media=imedia and content.category=icategory and category.comment like '%MUSIC%' order by icontent~
+
+<br><FONT face="Tahoma" color="#000000" size=1>NEXT SONG:<br> ~?a~ - ~?b~ - ~?c~</FONT><br>
+<!--METADATAS NEXTSONG :-->
+<textarea name="artistnext" cols=1 rows=1 style="visibility:hidden">~?a~</textarea>
+<textarea name="titlenext" cols=1 rows=1 style="visibility:hidden">~?b~</textarea>
+<textarea name="runtimenext" cols=1 rows=1 style="visibility:hidden">~?c~</textarea>
+<textarea name="imagenext" cols=1 rows=1 style="visibility:hidden">~?d~</textarea>
+
+~_~
+
+</form>
+
+</body>
+</html>
