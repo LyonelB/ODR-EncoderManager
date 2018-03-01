@@ -33,3 +33,13 @@ Varia-store : http://varia-store.com/Hardware/19-DualRack-Box/complete-system/AP
 ### Carte son Mini PCI Express
 
 http://www.dpie.com/mini-pcie/audio/
+
+## Encoder réalisé par Yoann Queret
+
+https://www.rack-matrix.com/fr/galerie#20
+
+https://store.rack-matrix.com/en/products/29-apu-2-2-or-4-gb-amd-gx-412tc-quad-core-1-ghz.html#/14-memory-4_gb
+
+https://store.rack-matrix.com/en/front-panel/8-rack-matrix-enclosure-plate-for-apualix-3x-leds-placement-and-push-button.html
+
+https://store.rack-matrix.com/en/rackmatrix-enclosure/2-rackmatrix-m1-enclosure.html#/2-brand-white/62-front_panel-without_front_panel
