@@ -86,9 +86,9 @@ Et connectez-vous avec les identifiants/mdp :
 
 Dans la partie "PAD Encoder" d'ODR-EncoderManager :
 
-PAD fifo file: /pad/metadata.pad
-DLS fifo file: /pad/metadata.dls
-Slide directory : /pad/slide/
+    PAD fifo file: /pad/metadata.pad
+    DLS fifo file: /pad/metadata.dls
+    Slide directory : /pad/slide/
 
 Pour ajouter votre image :
 
