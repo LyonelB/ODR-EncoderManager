@@ -24,3 +24,5 @@ Afin d'ajouter le tritrage dans ODR-EncoderManager
   
   
   pi@raspberrypi:/var/www/html $ sudo chown -R www-data:www-data /var/www/html/
+  
+  sudo apt-get php7.0-curl php7.0-gd php7.0-imap php7.0-json php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-xmlrpc
