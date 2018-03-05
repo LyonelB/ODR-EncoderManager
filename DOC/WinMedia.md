@@ -8,7 +8,7 @@ Afin d'ajouter le tritrage dans ODR-EncoderManager
   
 ## Installation de PHP
 
-    $ sudo aptitude install php php-mbstring
+    $ sudo aptitude install php php-mbstring php-xml
   
 ## Titrage WinMedia
 
