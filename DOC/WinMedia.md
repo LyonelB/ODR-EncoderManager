@@ -17,4 +17,9 @@ Afin d'ajouter le tritrage dans ODR-EncoderManager
     $ sudo chmod -R 740 WinMedia.php
     $ sudo chown -R www-data:www-data /var/www/html
 
+## Restart Apache2
+
+    $ sudo /etc/init.d/apache2 restart
+  
+  
   pi@raspberrypi:/var/www/html $ sudo chown -R www-data:www-data /var/www/html/
