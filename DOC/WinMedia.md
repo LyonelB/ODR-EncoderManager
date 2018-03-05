@@ -8,14 +8,15 @@ Afin d'ajouter le tritrage dans ODR-EncoderManager
   
 ## Installation de PHP
 
-    $ sudo aptitude install php php-mbstring php-xml
+    $ sudo aptitude install php php-mbstring php-xml php-mysql
   
 ## Titrage WinMedia
 
     $ cd /var/www/html
     $ wget https://raw.githubusercontent.com/LyonelB/ODR-EncoderManager/master/WinMedia.php
     $ sudo chmod -R 740 WinMedia.php
-    $ sudo chown -R www-data:www-data /var/www/html
+    $ sudo chown -R odr:www-data /var/www/html
+    $ sudo usermod -a -G www-data odr
 
 ## Restart Apache2
 
