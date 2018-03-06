@@ -2,6 +2,24 @@
 
 Il y a différentes options : Raspberry Pi, Shuttle, Supermicro ...
 
+### Raspberry
+
+Cartes sons
+
+https://fe-pi.com/products/fe-pi-audio-v1
+
+http://www.audioinjector.net/rpi-hat
+
+https://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
+
+Préampli 
+
+https://fr.aliexpress.com/item/Balanced-Pre-Amp-Unbalanced-to-balanced-unbalanced-RCA-to-XLR-Stereo-Preamplifier-Board/32730970503.html
+
+Chassis rack 1U
+
+http://fr.farnell.com/pro-power/g17081ubk/coffret-19p-abs-1u-noir/dp/1526723?st=g17081u
+
 ### PC avec port PCI express
 
 shuttle xh110g : http://www.shuttle.eu/fr/produits/slim/xh110g/apercu/
