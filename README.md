@@ -32,8 +32,8 @@ Supprimez le “#” au début de la ligne commençant par “deb-src”
 Importez le script d'installation 
 
     $ wget https://raw.githubusercontent.com/LyonelB/ODR-EncoderManager/master/EncManInstall.sh
-    $ chmod +x raspdab.sh
-    $ ./raspdab.sh 
+    $ chmod +x EncManInstall.sh
+    $ ./EncManInstall.sh 
     $ cd
 
 ## Installation de ODR-EncoderManager
